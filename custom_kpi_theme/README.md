@@ -1,1 +1,1 @@
-Custom kobocat theme of kobotoolbox/kobocat
+Custom KPI theme of kobotoolbox/kpi

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{%block head %}
+  {% load staticfiles %}
+  {% if config.login_background %}
+  <style>
+  .registration__bg {
+    background: url("{{ config.login_background }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  </style>
+  {% endif %}
+{% endblock %}
+
+{% block logo %}
+    {% if config.logo %}
+        <img src="{{ config.logo }}"/>
+    {% else %}
+        <img src="{% static 'custom_kpi_theme/img/kobologo.svg' %}"/>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}

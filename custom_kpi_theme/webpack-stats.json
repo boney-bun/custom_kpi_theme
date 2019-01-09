@@ -1,0 +1,1 @@
+{"status":"error","publicPath":"/static/compiled/","error":"ModuleBuildError","message":"Module build failed (from /srv/node_modules/sass-loader/lib/loader.js):\n\n@import \"../fonts/k-icons\";\n^\n      File to import not found or unreadable: ../fonts/k-icons.\n      in /srv/src/custom_kpi_theme/custom_kpi_theme/jsapp/scss/main.scss (line 4, column 1)"}

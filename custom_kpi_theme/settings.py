@@ -41,9 +41,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # Application definition
-INSTALLED_APPS = list(INSTALLED_APPS) + ['custom_kpi_theme', ]
+INSTALLED_APPS = list(INSTALLED_APPS) + \
+                 ['custom_kpi_theme', 'snowpenguin.django.recaptcha2',]
 
 ROOT_URLCONF = 'custom_kpi_theme.urls'
+
+RECAPTCHA_PRIVATE_KEY = '6LdvRXUUAAAAAKGKUgTxAcGjC1ESPCtwNhsEX-r7'
+RECAPTCHA_PUBLIC_KEY = '6LdvRXUUAAAAABu0RDupGcVLdehnyQJAT0eGIvby'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -58,7 +62,8 @@ _LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 # STATICFILES_DIRS.append(
 #     os.path.join(_LOCAL_ROOT, "static"),
 # )
-STATICFILES_DIRS = STATICFILES_DIRS +  (
+STATICFILES_DIRS = STATICFILES_DIRS + (
+    os.path.join(_LOCAL_ROOT, 'jsapp'),
     os.path.join(_LOCAL_ROOT, "static"),
 )
 
@@ -74,3 +79,11 @@ template_dirs = list(TEMPLATES[0]['DIRS'])
 template_dirs.insert(0, _TEMPLATE_DIR)
 
 TEMPLATES[0]['DIRS'] = template_dirs
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'jsapp/compiled/',
+        'POLL_INTERVAL': 0.5,
+        'TIMEOUT': 5,
+    }
+}

@@ -1,0 +1,4 @@
+include README.md
+recursive-include custom_kpi_theme/static *
+recursive-include custom_kpi_theme/templates *
+recursive-include custom_kpi_theme/jsapp *

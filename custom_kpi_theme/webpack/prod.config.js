@@ -11,7 +11,7 @@ module.exports = WebpackCommon({
   },
   output: {
     path: path.resolve(__dirname, '../jsapp/compiled/'),
-    publicPath: publicPath,
+//    publicPath: publicPath,
     filename: "[name]-[hash].js"
   },
 });

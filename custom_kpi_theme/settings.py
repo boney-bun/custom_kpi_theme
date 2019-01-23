@@ -62,11 +62,11 @@ _LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 # STATICFILES_DIRS.append(
 #     os.path.join(_LOCAL_ROOT, "static"),
 # )
-STATICFILES_DIRS = STATICFILES_DIRS + (
-    os.path.join(_LOCAL_ROOT, 'jsapp'),
-    os.path.join(_LOCAL_ROOT, "static"),
-    os.path.join(_LOCAL_ROOT, "compiled"),
-)
+# STATICFILES_DIRS = STATICFILES_DIRS + (
+#     os.path.join(_LOCAL_ROOT, 'jsapp'),
+#     os.path.join(_LOCAL_ROOT, "static"),
+#     ('mocha', os.path.join(BASE_DIR, 'node_modules', 'mocha'),),
+# )
 
 _LOCALE_DIR = os.path.join(_LOCAL_ROOT, 'locale')
 _TEMPLATE_DIR = os.path.join(_LOCAL_ROOT, 'templates')
@@ -81,11 +81,11 @@ template_dirs.insert(0, _TEMPLATE_DIR)
 
 TEMPLATES[0]['DIRS'] = template_dirs
 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        # 'BUNDLE_DIR_NAME': 'jsapp/compiled/',
-        'BUNDLE_DIR_NAME': 'compiled/',
-        'POLL_INTERVAL': 0.5,
-        'TIMEOUT': 5,
-    }
-}
+# WEBPACK_LOADER = {
+#     'DEFAULT': {
+#         # 'BUNDLE_DIR_NAME': 'jsapp/compiled/',
+#         'BUNDLE_DIR_NAME': 'compiled/',
+#         'POLL_INTERVAL': 0.5,
+#         'TIMEOUT': 5,
+#     }
+# }
